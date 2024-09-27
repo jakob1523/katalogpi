@@ -90,6 +90,24 @@ mkdir kode
 cd kode/
 ```
 
+Koble mappen med denne github repositorien: https://github.com/jakob1523/katalogpi
+```console
+git clone https://github.com/jakob1523/katalogpi
+```
+```console
+cd katalogpi/
+```
+På pc-en din hent filen telefonkatalog_oppdatert_sql.py fra github.
+Inni koden finner du koblinger til database som ser sånn ut:
+```python
+mydb = mysql.connector.connect(
+    host="172.29.51.19",
+    user="test",
+    password="1234",
+    database="telefonkatalog"
+    )
+```
+Endre "host" til ip-en til pi-en, "user" til en bruker du har på MariaDB og "password" til passordet til den brukeren.
 
 # Database
 
@@ -121,3 +139,4 @@ INSERT INTO person (fornavn, etternavn, telefonnummer)
 VALUES ('Knut', 'Donald', '31415926');
 ```
 
+> **WARNING**: Ble ikke helt feridg med prosjektet
